@@ -124,7 +124,10 @@ if(keyState == 2)
 if (afsdfgwe)
 {
     if (a &gt; 1.0)
+    {
+    a = 1;
     afsdfgwe = false;
+    }
     else
     a += 0.03;
     
@@ -132,7 +135,10 @@ if (afsdfgwe)
 else if (in)
 {
     if ( a &lt; 0.0)
+    {
+    a = 0;
     in = false;
+    }
     else
     a -= 0.03;
 }

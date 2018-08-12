@@ -316,6 +316,7 @@ drawEndGUI=true;
     }
     else
     {
+        objPlayer.inputLock = true;
         audio_play_sound(sndWin,0,false);
         logMessage = objGameController.prefix + " Player has dominated the field";
     }

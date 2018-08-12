@@ -57,7 +57,15 @@ draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_text(view_wport[0]/2,view_hport[0]/2,"You have beaten the game##The end");
 draw_text(view_wport[0]/2,view_hport[0]- 30,"By HaselLoyance for LD42#Music from Jukedeck - create your own at http://jukedeck.com");
+
+if (a &gt; 0.0)
+{
 a -= 0.003;
+}
+else
+{
+a = 0;
+}
 
 
 draw_sprite_ext(sprBlack,0,0,0,view_wport[0],view_hport[0],0,c_white,a );

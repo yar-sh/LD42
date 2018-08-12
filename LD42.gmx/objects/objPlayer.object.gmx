@@ -251,7 +251,7 @@ if (dead)
     }
 }
 
-if (dead &amp;&amp; fadeAnimAlpha == 0)
+if (dead &amp;&amp; fadeAnimAlpha &lt;= 0.01)
 {
     instance_destroy();
 }
@@ -477,7 +477,7 @@ draw_sprite_ext(sprPlayer, drawSubSprite,x,y,1 + 0.5*scaleModifier,1+ 0.5*scaleM
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (objGameController.powerups[2]&amp;&amp; !dead &amp;&amp; !inputLock)
+            <string>if (objGameController.powerups[2]&amp;&amp; !dead &amp;&amp; !inputLock&amp;&amp; !objGameController.drawEndGUI)
 {
 audio_play_sound(sndPw3,0,false);
     objGameController.extraJumpTime = 600;
@@ -511,7 +511,7 @@ audio_play_sound(sndNoPW,0,false);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (objGameController.powerups[1]&amp;&amp; !dead &amp;&amp; !inputLock)
+            <string>if (objGameController.powerups[1]&amp;&amp; !dead &amp;&amp; !inputLock&amp;&amp; !objGameController.drawEndGUI)
 {
     if (hookCell.platform == 0) 
     {
@@ -546,7 +546,7 @@ audio_play_sound(sndNoPW,0,false);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (objGameController.powerups[0]&amp;&amp; !dead &amp;&amp; !inputLock)
+            <string>if (objGameController.powerups[0]&amp;&amp; !dead &amp;&amp; !inputLock &amp;&amp; !objGameController.drawEndGUI)
 {
     scrSpawnPhantomPlatform(innerCell.i,innerCell.j);
  

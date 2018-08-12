@@ -144,7 +144,7 @@ if (fallFadeAnim)
     image_yscale -=0.047;
 }
 
-if (fallFadeAnim &amp;&amp; image_alpha == 0)
+if (fallFadeAnim &amp;&amp; image_alpha  &lt;= 0.01)
 {
 
     instance_destroy();

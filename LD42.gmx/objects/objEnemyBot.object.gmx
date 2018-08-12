@@ -305,7 +305,7 @@ if (dead)
     }
 }
 
-if (dead &amp;&amp; fadeAnimAlpha == 0)
+if (dead &amp;&amp; fadeAnimAlpha  &lt;= 0.01)
 {
     instance_destroy();
 }
